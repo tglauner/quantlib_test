@@ -18,7 +18,7 @@ def build_sofr_curve():
     # Define SOFR swap rates (assume market data)
     swap_maturities = [1, 2, 3, 5, 7, 10, 15, 20, 30]  # Years
     swap_rates = [0.051, 0.053, 0.055, 0.057, 0.059, 0.06, 0.062, 0.064, 0.065]  # Corresponding SOFR swap rates
-
+ 
     # Convert to deposit and swap helpers
     rate_helpers = [ql.OISRateHelper(2, ql.Period("1D"), ql.QuoteHandle(overnight_quote), overnight_index)]
 
